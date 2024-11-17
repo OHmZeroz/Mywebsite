@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่ท่องเที่ยวในสนามชัยเขต</title>
+     <!-- Google Fonts Link -->
+     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+         /* ปรับปรุง navbar ให้ทันสมัย */
+         .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: rgb(1, 105, 15);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(2, 119, 51) !important;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745 !important;
+            text-decoration: underline;
+        }
+
+        /* ปรับขนาดและการแสดงผลของปุ่ม */
+        .navbar-toggler-icon {
+            background-color: rgb(250, 0, 0);
+        }
+
+        /* ปรับความสูงของ navbar */
+        .navbar {
+            padding: 15px 30px;
+        }
+        
+        /* กำหนดพื้นหลังของหน้าให้ดูสะอาด */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        /* ปรับขนาดให้กรอบทันสมัยและมีมุมมน */
+        .place-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .place-card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        /* กำหนดกรอบสำหรับคอลัมน์ */
+        .place-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+
+        .place-card-container .place-card {
+            flex: 1 1 calc(33.333% - 20px);
+            min-height: 450px;
+            transition: transform 0.3s ease;
+        }
+
+        /* แถบข้อความหลักที่ด้านบน */
+        header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        /* กำหนดกรอบให้กับหัวข้อประวัติ */
+        .history-section {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        }
+
+        .history-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #28a745;
+        }
+
+        .history-section p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #333;
+        }
+
+
+        /* ปรับปรุงปุ่มให้ทันสมัย */
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+
+        /* ปรับให้ footer ไม่เบียดกับเนื้อหา */
+        footer {
+            background-color: #f1f1f1;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">เที่ยวสนามชัยเขต</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="places.html">สถานที่ท่องเที่ยว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Hotels.html">ที่พัก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="video.html">วิดีโอ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>สถานที่ท่องเที่ยวในสนามชัยเขต</h1>
+        <p>รวมสถานที่ธรรมชาติและวัฒนธรรมที่คุณไม่ควรพลาด</p>
+        <a href="places.html" class="btn-custom">ดูสถานที่ท่องเที่ยว</a>
+    </header>
+
+    <!-- ประวัติอำเภอสนามชัยเขต -->
+        <section class="history-section container">
+            <h2>ประวัติอำเภอสนามชัยเขต</h2>
+            <p>อําเภอสนามชัยเขต จัดตั้งเมื่อวันที่ 15 มิถุนายน 2516 ในปีพ.ศ. 2454 มีฐานะเป็นกิ่งอําเภอ
+                เรียกว่า "กิ่งอําเภอสนามไชยเขตต์" โดยมีที่ว่าการกิ่งอําเภอตั้งอยู่ที่วัดท้าวอู่ไท บ้านนา ตําบลท่ากระดาน
+                อําเภอสนามชัยเขต แต่ได้ยุบฐานะลงเป็นตําบลอีกครั้งเมื่อปีพ.ศ.2474 โดยให้อยู่ในเขตการปกครองของอําเภอ
+                พนมสารคาม หลังจากนั้นปีพ.ศ. 2509 จีงได้รับการยกฐานะเป็น "กิ่งอําเภอสนามชัยเขต" ใหม่โดยประกาศ
+                กระทรวงมหาดไทย แบ่งท้องที่การปกครองเป็นตําบลคู้ยายหมีตําบลท่ากระดาน และตําบลท่าตะเกียบขึ้นกับ
+                อําเภอพนมสารคาม ซึ่งเป็นท้องที่กิ่งอําเภอสนามไชยเขตต์มาแต่เดิม โดยตั้งที่ว่าการกิ่งอําเภอที่บ้านโพนงาม
+                หมู่ที่ 4 ตําบลคู้ยายหมีอยู่ห่างจากตําบลท่ากระดาน ที่ตั้งตัวเมืองเดิมประมาณ 25 กิโลเมตร ในปีพ.ศ.2515
+                เปลี่ยนชื่อจาก "กิ่งอําเภอสนามไชยเขตต์" เป็น "กิ่งอําเภอสนามชัยเขต" โดยประกาศกระทรวงมหาดไทย
+                ลงวันที่ 4 ธันวาคม 2515 และในปีพ.ศ. 2516 ได้รับการยกฐานะเป็น "อําเภอสนามชัยเขต" โดยพระราชกฤษฎีกา
+                ลงวันที่ 15 มิถุนายน 2516</p>
+            <p>สนามชัยเขตได้เริ่มเป็นที่รู้จักตั้งแต่สมัยรัชกาลที่ 5 โดยเริ่มมีการพัฒนาให้เป็นพื้นที่การเกษตร เนื่องจากพื้นที่มีความอุดมสมบูรณ์จากแม่น้ำและลำน้ำต่างๆ ที่ไหลผ่าน ท่ามกลางภูมิประเทศที่สวยงาม ทำให้สถานที่แห่งนี้มีความสำคัญในด้านเศรษฐกิจและวัฒนธรรมของจังหวัดฉะเชิงเทรา.</p>
+        </section>
+
+    <!-- Content -->
+    <main class="container my-5">
+        <div class="place-card-container">
+            <!-- ทะเลน้ำจืดวังคู -->
+            <div class="place-card">
+                <img src="images/wang-ku-lake.jpg" alt="ทะเลน้ำจืดวังคู">
+                <div class="place-card-body">
+                    <h3>ทะเลน้ำจืดวังคู</h3>
+                    <p>แหล่งท่องเที่ยวธรรมชาติที่งดงาม น้ำใสสะอาด ล้อมรอบด้วยต้นไม้ร่มรื่น เหมาะสำหรับกิจกรรมทางน้ำและการพักผ่อน.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต จากนั้นขับตามป้ายบอกทางไปยังตำบลคลองเขื่อน.</p>
+                </div>
+            </div>
+
+            <!-- วัดห้วยน้ำทรัพย์ -->
+            <div class="place-card">
+                <img src="images/wat-huay-nam-sap.jpg" alt="วัดห้วยน้ำทรัพย์">
+                <div class="place-card-body">
+                    <h3>วัดห้วยน้ำทรัพย์</h3>
+                    <p>วัดพระธาตุวาโย โดดเด่นด้วยพระธาตุที่ตั้งบนเนินเขา เป็นจุดชมวิวที่งดงามและศูนย์รวมจิตใจของชุมชน.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>จากกรุงเทพฯ ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต แล้วเลี้ยวเข้าถนนรองไปยังตำบลทุ่งพระยา.</p>
+                </div>
+            </div>
+
+            <!-- อ่างเก็บน้ำคลองระบม -->
+            <div class="place-card">
+                <img src="images/klong-rabom-dam.jpg" alt="อ่างเก็บน้ำคลองระบม">
+                <div class="place-card-body">
+                    <h3>อ่างเก็บน้ำคลองระบม</h3>
+                    <p>แหล่งน้ำสำคัญของพื้นที่ เป็นสถานที่เงียบสงบ เหมาะสำหรับการปิกนิกและการพักผ่อนกับธรรมชาติ.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต จากนั้นเลี้ยวเข้าถนนรองที่นำไปสู่อ่างเก็บน้ำ.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

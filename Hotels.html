@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ที่พักในสนามชัยเขต</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Kanit', sans-serif;
+        }
+
+          /* ปรับปรุง navbar ให้ทันสมัย */
+          .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            color: rgb(1, 105, 15);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(2, 119, 51) !important;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745 !important;
+            text-decoration: underline;
+        }
+
+        /* ปรับขนาดและการแสดงผลของปุ่ม */
+        .navbar-toggler-icon {
+            background-color: rgb(250, 0, 0);
+        }
+
+        /* ปรับความสูงของ navbar */
+        .navbar {
+            padding: 15px 30px;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .accommodation-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .accommodation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .accommodation-card img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+        }
+
+        .accommodation-card-body {
+            padding: 20px;
+        }
+
+        .accommodation-card-body h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .accommodation-card-body p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">เที่ยวสนามชัยเขต</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="places.html">สถานที่ท่องเที่ยว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Hotels.html">ที่พัก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="video.html">วิดีโอ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>ที่พักในสนามชัยเขต</h1>
+        <p>เลือกที่พักที่ดีที่สุดในอำเภอสนามชัยเขต</p>
+    </header>
+
+    <!-- ที่พัก -->
+    <main class="container my-5">
+        <div class="accommodation-card">
+            <img src="https://lh3.googleusercontent.com/p/AF1QipML67bOHDF7l510d5Pqx0y23H1EpofjDz3I5yDd=s680-w680-h510" alt="ที่พัก 1">
+            <div class="accommodation-card-body">
+                <h3>Rim Muang Resort (ริมเมือง รีสอร์ท)</h3>
+                <p><strong>รายละเอียด:</strong> Rim Muang Resort เป็นที่พักที่มีบรรยากาศสงบ เหมาะสำหรับการพักผ่อน ห้องพักกว้างขวางและสะอาด มีการบริการที่ดีเยี่ยมจากเจ้าหน้าที่.</p>
+                <p><strong>สิ่งอำนวยความสะดวก:</strong> ห้องพักสะดวกสบาย บรรยากาศเงียบสงบ และการบริการที่เป็นกันเอง.</p>
+                <p><strong>วิธีการเดินทาง:</strong> รีสอร์ทตั้งอยู่ห่างจากตัวเมืองสนามชัยเขต ขับรถไม่นานก็ถึงตามถนนหลวงสายหลัก.</p>
+                <a href="https://maps.app.goo.gl/9GX5F5HSxhF4TQif9" target="_blank" class="btn-custom">ดูแผนที่</a>
+            </div>
+        </div>
+
+        <div class="accommodation-card">
+            <img src="https://scontent.futp1-2.fna.fbcdn.net/v/t39.30808-6/314661685_618091656681458_7743035045716575324_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG0ywRyXGFkAU09tK0a-uZZg4Topm08r7WDhOimbTyvtcmNhJ5oWJHlWhDh1DZAvmh4gEsjljGyxXtDySe95y1X&_nc_ohc=5EEUYuxyHowQ7kNvgHVh5N_&_nc_zt=23&_nc_ht=scontent.futp1-2.fna&_nc_gid=AZ_yOMFvB45AN2LJiiGY5mq&oh=00_AYCe0pkYcdCfcYvPMg0YRgBauJJkgJ_Cwl94ndekMcy6dA&oe=673E9985" alt="ที่พัก 2">
+            <div class="accommodation-card-body">
+                <h3>The Bed Resort (เดอะเบด รีสอร์ท)</h3>
+                <p><strong>รายละเอียด:</strong> เดอะเบด รีสอร์ท ตั้งอยู่ใกล้ตลาดท้องถิ่น มีห้องพักสะอาดและกว้างขวาง ราคาประหยัด เหมาะสำหรับผู้ที่ต้องการความสะดวกสบายและบรรยากาศเงียบสงบ.</p>
+                <p><strong>สิ่งอำนวยความสะดวก:</strong> ห้องพักใหญ่ บรรยากาศดี และราคาที่เหมาะสม.</p>
+                <p><strong>วิธีการเดินทาง:</strong> ตั้งอยู่ใกล้ตลาดในอำเภอสนามชัยเขต ขับรถจากตัวเมืองไปได้ง่ายและสะดวก.</p>
+                <a href="https://maps.app.goo.gl/deJEmEH2kfCADoPt7" target="_blank" class="btn-custom">ดูแผนที่</a>
+            </div>
+        </div>
+
+        <div class="accommodation-card">
+            <img src="https://scontent.futp1-1.fna.fbcdn.net/v/t39.30808-6/216991957_964228741040921_917364613951426148_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_eui2=AeHf8sUkBkWns1yw03nbRkoHacYTmCxZPHBpxhOYLFk8cHQpgS7AlxdwRpVe6PxWp1KiIl3WYWpH4Y4IpXpjImSE&_nc_ohc=IAmNZFfeXvkQ7kNvgGjcRb2&_nc_zt=23&_nc_ht=scontent.futp1-1.fna&_nc_gid=Al4KnzrmW5FhEJSR2KRr_uF&oh=00_AYCK9h9nEMMWrtR9gcMlyS8PN9s4xZsjgja6fb6-cQq0PQ&oe=673EB610" alt="ที่พัก 3">
+            <div class="accommodation-card-body">
+                <h3>Inside Resort (อินไซด์ รีสอร์ท)</h3>
+                <p><strong>รายละเอียด:</strong> อินไซด์ รีสอร์ท เป็นสถานที่พักที่มีความสงบเงียบ เหมาะสำหรับผู้ที่ต้องการหลีกหนีจากความวุ่นวาย มีห้องพักสะอาดและสวยงาม บริการดีเยี่ยม.</p>
+                <p><strong>สิ่งอำนวยความสะดวก:</strong> ห้องพักสะดวกสบาย ท่ามกลางธรรมชาติและบรรยากาศที่ดีเยี่ยม.</p>
+                <p><strong>วิธีการเดินทาง:</strong> รีสอร์ทตั้งอยู่ในพื้นที่เงียบสงบของสนามชัยเขต ขับรถจากตัวเมืองไปไม่ไกล.</p>
+                <a href="https://maps.app.goo.gl/eGUj9XHqEszjS2HSA" target="_blank" class="btn-custom">ดูแผนที่</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

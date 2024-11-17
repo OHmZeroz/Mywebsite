@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถานที่ท่องเที่ยวในสนามชัยเขต</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        
+        /* ปรับปรุง navbar ให้ทันสมัย */
+        .navbar {
+            background-color: #1b9610;
+        }
+
+        .navbar-brand {
+            color: rgb(1, 105, 15);
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .navbar-nav .nav-link {
+            color: rgb(2, 119, 51) !important;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #28a745 !important;
+            text-decoration: underline;
+        }
+
+        /* ปรับขนาดและการแสดงผลของปุ่ม */
+        .navbar-toggler-icon {
+            background-color: rgb(250, 0, 0);
+        }
+
+        /* ปรับความสูงของ navbar */
+        .navbar {
+            padding: 15px 30px;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .place-card {
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            background-color: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        .place-card-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .place-card-container {
+            display: block;
+            margin-top: 30px;
+        }
+
+        header {
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            padding: 50px 0;
+            border-radius: 0 0 15px 15px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        .btn-custom {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: #218838;
+        }
+
+        /* ปรับให้กรอบของแผนที่แสดงได้เต็มที่ */
+        .map-container {
+            position: relative;
+            width: 100%;
+            height: 400px; /* ปรับความสูงของแผนที่ */
+            margin-bottom: 20px;
+        }
+
+        .map-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">เที่ยวสนามชัยเขต</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">หน้าแรก</a></li>
+                    <li class="nav-item"><a class="nav-link" href="places.html">สถานที่ท่องเที่ยว</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Hotels.html">ที่พัก</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="video.html">วิดีโอ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>สถานที่ท่องเที่ยวในสนามชัยเขต</h1>
+        <p>รวมสถานที่ธรรมชาติและวัฒนธรรมที่คุณไม่ควรพลาด</p>
+    </header>
+
+    <!-- Content -->
+    <main class="container my-5">
+        <div class="place-card-container">
+            <!-- ทะเลน้ำจืดวังคู -->
+            <div class="place-card">
+                <img src="images/wang-ku-lake.jpg" alt="ทะเลน้ำจืดวังคู">
+                <div class="place-card-body">
+                    <h3>ทะเลน้ำจืดวังคู</h3>
+                    <p>แหล่งท่องเที่ยวธรรมชาติที่งดงาม น้ำใสสะอาด ล้อมรอบด้วยต้นไม้ร่มรื่น เหมาะสำหรับกิจกรรมทางน้ำและการพักผ่อน.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต จากนั้นขับตามป้ายบอกทางไปยังตำบลคลองเขื่อน.</p>
+                </div>
+
+                <!-- ฝังแผนที่ Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35975.50981702275!2d101.61934084267658!3d13.681648890094987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311ceb0ea42b03e7%3A0x8efcab300e047e69!2z4Lit4LmI4Liy4LiH4LmA4LiB4LmH4Lia4LiZ4LmJ4Liz4LmA4LiC4Li34LmI4Lit4LiZ4Lij4Liw4Lia4Lih4LiX4Liw4LmA4Lil4LiZ4LmJ4Liz4LiI4Li34LiU!5e1!3m2!1sth!2sth!4v1731776542245!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+            </div>
+
+            <!-- วัดห้วยน้ำทรัพย์ -->
+            <div class="place-card">
+                <img src="images/wat-huay-nam-sap.jpg" alt="วัดห้วยน้ำทรัพย์">
+                <div class="place-card-body">
+                    <h3>วัดห้วยน้ำทรัพย์</h3>
+                    <p>วัดพระธาตุวาโย โดดเด่นด้วยพระธาตุที่ตั้งบนเนินเขา เป็นจุดชมวิวที่งดงามและศูนย์รวมจิตใจของชุมชน.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>จากกรุงเทพฯ ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต แล้วเลี้ยวเข้าถนนรองไปยังตำบลทุ่งพระยา.</p>
+                </div>
+
+                <!-- ฝังแผนที่ Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13877.481829097062!2d101.42194852919536!3d13.561901159206348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311cdeaf4b8e4473%3A0x1a97bbdb7c1dd4a9!2z4Lin4Lix4LiU4Lir4LmJ4Lin4Lii4LiZ4LmJ4Liz4LiX4Lij4Lix4Lie4Lii4LmMICjguKfguLHguJTguJ7guKPguLDguJjguLLguJXguLjguKfguLLguYLguKIp!5e1!3m2!1sth!2sth!4v1731775395431!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+            </div>
+
+            <!-- อ่างเก็บน้ำคลองระบม -->
+            <div class="place-card">
+                <img src="images/klong-rabom-dam.jpg" alt="อ่างเก็บน้ำคลองระบม">
+                <div class="place-card-body">
+                    <h3>อ่างเก็บน้ำคลองระบม</h3>
+                    <p>แหล่งน้ำสำคัญของพื้นที่ เป็นสถานที่เงียบสงบ เหมาะสำหรับการปิกนิกและการพักผ่อนกับธรรมชาติ.</p>
+                    <h4>วิธีการเดินทาง</h4>
+                    <p>ใช้ถนนทางหลวงหมายเลข 304 มุ่งหน้าสู่อำเภอสนามชัยเขต จากนั้นเลี้ยวเข้าถนนรองที่นำไปสู่อ่างเก็บน้ำ.</p>
+                </div>
+
+                <!-- ฝังแผนที่ Google Map -->
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d171153.3141864616!2d101.43208048478891!3d13.64862148077535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x311cebb82f4d6d83%3A0xe5105179ba950b68!2z4LmA4LiC4Li34LmI4Lit4LiZ4Lij4Liw4Lia4Lih!5e1!3m2!1sth!2sth!4v1731776522830!5m2!1sth!2sth" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
